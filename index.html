@@ -12,7 +12,13 @@
     <header>
       <h1>Mounts of Eorzea</h1>
       <div class="topnav">
-        <input id= "searchbar" type="text" placeholder="Search..">
+        <form id="search" action="" method="get" class="search-form">
+          <div class="form">
+            <input id= "searchbar" name="search-box" type="text" placeholder="Search..">
+            <input type="submit" value="Search" />
+          </div>
+        </form>
+        
       </div>
       <nav>
         <ul id="mount-list">
@@ -33,7 +39,8 @@
       <h5 id="type"></h5>
       <h5 id="text"></h5>
     </div>
-    <script src="index.js"></script>
+    <!-- <script src="index.js"></script> -->
+    <!-- not sure why you have this script here since you have a script.js at the top - it was throwing an error so i commented it out  -->
   </body>
 </html>
 
