@@ -27,7 +27,7 @@ function initialize(){
     const mountSelectedEDescription = document.querySelector("#enhanced_description")
     const mountSelectedType = document.querySelector("#type")
     const mountSelectedText = document.querySelector("#text")
-    const searchBar = document.getElementById('searchbar')
+    const searchBar = document.getElementById('search');
     
     function renderMountsList(mounts){
         mounts.results.forEach((mount) => {
@@ -54,14 +54,23 @@ function initialize(){
                 mountSelectedType.textContent = e.target.dataset.type;
                 mountSelectedText.textContent = e.target.dataset.text;
                 })
-                searchBar.addEventListener('keyup', (e) => {
-                    const searchMount = e.target.value;
-                    const filteredMounts = mounts.results.filter((mount) => {
-                        return (
-                            mount.name.includes(searchMount));
-                        })
-                console.log(filteredMounts);
-                })
+                searchBar.addEventListener("submit", (e) => {
+                    const inputValue = document.querySelector("#searchbar").value;
+                    if (inputValue === inputValue) {
+                        console.log(inputValue) //whatever value you want to return
+                    }
+                    else {
+                        console.log("sorry not found")
+                    }
+                }
+
+                //     const searchMount = e.target.value;
+                //     debugger;
+                //     const filteredMounts = mounts.results.filter((mount) => {
+                //         debugger;
+                //         return (
+                //             mount.name.includes(searchMount));
+                //         })
+                // console.log(filteredMounts);
+             )
         })}
-            
-            
